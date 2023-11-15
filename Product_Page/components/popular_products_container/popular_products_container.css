@@ -46,9 +46,6 @@
   margin: 0;
 }
 
-.product_container {
-  background-color: #fdfce2;
-}
 .product_img_container {
   position: relative;
 }
@@ -82,6 +79,9 @@ border: 1px white;
 height: 30px;
 width: 30px;
 }
+.product_container{
+  padding-bottom: 15px;
+}
   #popularProducts_head {
     display: flex;
     justify-content: space-around;
@@ -104,6 +104,8 @@ width: 30px;
 
   #products_container {
     grid-template-columns: repeat(2, 1fr);
+    padding-bottom: 5px;
+
   }
 
   #popularProducts_body img {
@@ -120,6 +122,9 @@ width: 30px;
     justify-content: space-around;
     font-size: 20px;
   }
+    .product_container {
+      padding-bottom: 10px;
+    }
   #popularProducts_head img {      
       width: 300px;
   }

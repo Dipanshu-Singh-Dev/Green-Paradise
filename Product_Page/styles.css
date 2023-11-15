@@ -123,13 +123,13 @@ footer * {
     flex-direction: column;
   }
   #filters {
-    display: flex;
+    display: grid;
     gap: 25px;
-    align-items: center;
-    justify-content: space-around;
-    font-size: 12px;
-    flex-wrap: wrap;
-    flex-direction: row;
+    grid-template-columns: repeat(2,1fr);
+  }
+  #filter *{
+    margin: auto;
+    width: 100%;
   }
 }
 @media screen and (max-width: 400px) {
