@@ -9,6 +9,7 @@
 * {
   font-family: "ClashDisplay Regular", sans-serif;
 }
+
 #body {
   width: 80vw;
 margin: auto;
@@ -126,6 +127,10 @@ footer * {
     display: grid;
     gap: 25px;
     grid-template-columns: repeat(2,1fr);
+    & p {
+        display: flex;
+        align-items: center;
+      }
   }
   #filter *{
     margin: auto;
