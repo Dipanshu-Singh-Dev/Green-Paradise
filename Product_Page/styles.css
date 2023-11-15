@@ -11,7 +11,7 @@
 }
 #body {
   width: 80vw;
-  margin: auto;
+margin: auto;
   font-family: "ClashDisplay Regular", sans-serif;
 }
 
@@ -134,8 +134,11 @@ footer * {
 }
 @media screen and (max-width: 400px) {
   #body {
-    width: 95%;
-    margin: auto;
+    width: 97.5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
   }
   #heading {
     font-size: 16px;
