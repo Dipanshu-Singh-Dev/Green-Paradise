@@ -92,8 +92,7 @@
 
 .product_img_container > img {
   z-index: 0;
-  width: 100%;
-  /* height: 50vh; */
+  object-fit: contain;
 }
 #applied_filters_sort {
   display: flex;
