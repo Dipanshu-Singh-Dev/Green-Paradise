@@ -78,7 +78,10 @@ border: 1px white;
     background-color: #486e00;
 }
 @media screen and (max-width:1000px) {
-
+.product_container svg{
+height: 30px;
+width: 30px;
+}
   #popularProducts_head {
     display: flex;
     justify-content: space-around;
@@ -120,6 +123,10 @@ border: 1px white;
   #popularProducts_head img {      
       width: 300px;
   }
+    .product_container svg {
+      height: 35px;
+      width: 35px;
+    }
    p{
       font-size: 14px;
   }
@@ -146,5 +153,13 @@ border: 1px white;
         gap: 10px;
         margin: auto;
     }
+        #popularProducts_body
+    p {
+      font-size: 16px;
+    }
+        .product_container svg {
+          height: 35px;
+          width: 35px;
+        }
 }
 
