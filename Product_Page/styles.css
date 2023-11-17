@@ -140,6 +140,7 @@ footer * {
   #filters {
     display: grid;
     gap: 25px;
+    margin: auto;
     grid-template-columns: repeat(2,1fr);
     & p {
         display: flex;
