@@ -297,8 +297,6 @@ let render = (data, start, till = 6, type = "notScroll") => {
       "svg"
     );
     heartSvg.setAttribute("class", "heart_svg");
-    heartSvg.setAttribute("width", "32px");
-    heartSvg.setAttribute("height", "32px");
     heartSvg.setAttribute("viewBox", "-2.4 -2.4 28.80 28.80");
     heartSvg.setAttribute("fill", "none");
     heartSvg.setAttribute("transform", "rotate(180)matrix(-1, 0, 0, -1, 0, 0)");
