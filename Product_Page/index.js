@@ -1,5 +1,4 @@
 import { navbarBigscreen, navbarSmallscreen } from "../Scripts/navbar.js";
-
 import footer from "./components/footer/footer.js";
 import products, {
   render,
@@ -30,7 +29,7 @@ let houseplants = false,
 let houseplantFilter = document.getElementById("houseplant_filter");
 let data = products,
   start = 0;
-houseplantFilter.onchange = () => {
+houseplantFilter.onclick = () => {
   houseplants = !houseplants;
   data = sortNfilter();
   start = render(data, 0);
@@ -39,19 +38,20 @@ houseplantFilter.onchange = () => {
 
 let priceRangeFilter = document.getElementById("price_range_filter");
 priceRangeFilter.onchange = () => {
+  // console.log('changed')
   data = sortNfilter();
   start = render(data, 0);
   i = 1;
 };
 let houseplantSetsFilter = document.getElementById("houseplant_set_filter");
-houseplantSetsFilter.onchange = () => {
+houseplantSetsFilter.onclick = () => {
   houseplant_sets = !houseplant_sets;
   data = sortNfilter();
   start = render(data, 0);
   i = 1;
 };
 let flowerpotFilter = document.getElementById("flowerpot_filter");
-flowerpotFilter.onchange = () => {
+flowerpotFilter.onclick = () => {
   flowerpots = !flowerpots;
   data = sortNfilter();
   start = render(data, 0);
@@ -60,7 +60,7 @@ flowerpotFilter.onchange = () => {
 let soilFertilizerFilter = document.getElementById(
   "soil_and_fertilizers_filter"
 );
-soilFertilizerFilter.onchange = () => {
+soilFertilizerFilter.onclick = () => {
   soil_fertilizers = !soil_fertilizers;
   data = sortNfilter();
   start = render(data, 0);
@@ -82,6 +82,7 @@ document.getElementById("reset_filters").onclick = () => {
   start = render(data, 0);
 };
 let sortNfilter = () => {
+  // console.log('sort and filter')
   let filtered = productFilter();
   let sortedNFiltered = productSort(filtered);
   return sortedNFiltered;
@@ -89,8 +90,7 @@ let sortNfilter = () => {
 let productFilter = () => {
   let priceRange = parseInt(priceRangeFilter.value);
   data = products.filter((el) => {
-    if (!houseplants && !houseplant_sets && !flowerpots && !soil_fertilizers)
-      return el.price <= priceRange;
+    if (!houseplants && !houseplant_sets && !flowerpots && !soil_fertilizers)return el.price <= priceRange;
     let res = false;
     if (houseplants && el.category === "Houseplants") res = true;
     if (houseplant_sets && el.category === "Houseplant Sets") res = true;
@@ -152,3 +152,12 @@ for (let elem of document.getElementsByClassName("catalog_link")) {
 }
 prevPopProd.disabled = true;
 prevPopProd.style.backgroundColor = "lightgray";
+
+(()=>{
+  const handleClick = (target) => {
+    target.className = target.className === "neuMorphicButton" ? "neuMorphicButtonEnabled" : "neuMorphicButton";
+    }
+  for (const el of document.getElementsByClassName("neuMorphicButton")) {
+    el.addEventListener("click", ()=>handleClick(el));
+  }
+})()

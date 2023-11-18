@@ -24,7 +24,7 @@ let products = [
     category: "Houseplants",
   },
   {
-    img: "./images/AtlantisPlanter-Teal.webp",
+    img: "./images/areca-palm-plant-xl.webp",
     name: "Areca Palm Plant XL",
     price: "2499",
     category: "Houseplants",
@@ -329,7 +329,9 @@ let render = (data, start, till = 6, type = "notScroll") => {
     let productName = document.createElement("p");
     let productPrice = document.createElement("p");
 
-    productName.textContent = el.name;
+    if(el.name.length>20){
+      productName.textContent = el.name.slice(0,20)+"...";
+    }else productName.textContent=el.name;
     productPrice.textContent = `₹${el.price}`;
 
     productInfoLeft.appendChild(productName);
